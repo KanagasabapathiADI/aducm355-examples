@@ -1,5 +1,5 @@
 /******************************************************************************
-Copyright (c) 2017-2019 Analog Devices, Inc. All Rights Reserved.
+Copyright (c) 2017-2026 Analog Devices, Inc. All Rights Reserved.
 
 This software is proprietary to Analog Devices, Inc. and its licensors.
 By using this software you agree to the terms of the associated
@@ -75,7 +75,7 @@ void I2CInit(void)
 }
 
 // Simple Delay routine
-void delay (long int length)
+void delay (volatile long int length)
 {
 	while (length >0)
     	length--;

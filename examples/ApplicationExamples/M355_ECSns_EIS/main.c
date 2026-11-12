@@ -1,5 +1,5 @@
 /******************************************************************************
-Copyright (c) 2017-2019 Analog Devices, Inc. All Rights Reserved.
+Copyright (c) 2017-2026 Analog Devices, Inc. All Rights Reserved.
 
 This software is proprietary to Analog Devices, Inc. and its licensors.
 By using this software you agree to the terms of the associated
@@ -19,15 +19,28 @@ Analog Devices Software License Agreement.
 
 void UartInit(void);
 void ClockInit(void);
+void GPIOInit(void);
+void GPIO_A_Int_Handler(void);
+volatile uint32_t ucButtonPress = 0;           // Flag set when S2 button is pressed.
 
 int main(void)
 {
+  uint32_t waitTicks;
   void AD5940_Main(void);
   //AfeWdtGo(false);                            // Disable Watchdog for debug purposes
   pADI_AFEWDT->WDTCON &=(~BITM_AFEWDT_WDTCON_EN);
   ClockInit();
   UartInit();
   AD5940_MCUResourceInit(0);    /* Inialize all peripherals etc. used for AD5940/AFE. */
+  GPIOInit();
+  while(!ucButtonPress)
+  {
+    printf("Press button S2 to start test \r\n");
+    for(waitTicks = 0; waitTicks < 100 && !ucButtonPress; waitTicks++)
+    {
+      AD5940_Delay10us(1000);
+    }
+  }
   AD5940_Main();
 }
 
@@ -48,5 +61,23 @@ void UartInit(void)
    UrtFifoClr(pADI_UART0, BITM_UART_COMFCR_RFCLR// Clear the Rx/TX FIFOs
               |BITM_UART_COMFCR_TFCLR);
 }
+void GPIOInit(void)
+{
+	DioCfgPin(pADI_GPIO1,PIN0,0);          //configure P1.0 as gpio
+	DioIenPin(pADI_GPIO1,PIN0,1);          // enable P1.0 as input
+    DioPulPin(pADI_GPIO1,PIN0,1);          // enable pull-up
+	DioIntPolPin(pADI_GPIO1,PIN0,1);       // Set polarity of P1.0 interrupt to low-high transition
+	DioIntPin(pADI_GPIO1,PIN0,INTA,1);          // Enable External interrupt A on P1.0
+	NVIC_EnableIRQ(SYS_GPIO_INTA_IRQn);         // Enable GPIO_INTA interrupt source in NVIC
+}
+void GPIO_A_Int_Handler()
+{
+   unsigned int uiIntSta = 0;
 
-
+   uiIntSta = DioIntSta(pADI_GPIO1);
+   if ((uiIntSta & 0x0001) ==0x0001)
+   {
+      DioIntClrPin(pADI_GPIO1,PIN0);
+      ucButtonPress = 2;
+   }
+}

@@ -20,11 +20,18 @@ Analog Devices Software License Agreement.
  *----------------------------------------------------------------------------*/
 
 #include "LED.h"
+#include "UrtLib.h"
+#include "DioLib.h"
+#include "ClkLib.h"
 
+void UartInit(void);
+void ClockInit(void);
 int main()
 {
 
 	int count = 0;
+    ClockInit();                                // Init system clocks
+    UartInit();                                 // Init UART for 230400-8-N-1
 	printf("Hello World!\n");
 	LED_Init();
 
@@ -38,5 +45,26 @@ int main()
 		printf ("count = %d\n", count++);
 	}
 
+}
+
+void UartInit(void)
+{
+   DioCfgPin(pADI_GPIO0,PIN10|PIN11,1);        // Setup P0.10, P0.11 as UART pin
+   UrtCfg(pADI_UART0,B230400,
+          (BITM_UART_COMLCR_WLS|3),0);         // Configure UART for 230400 baud rate
+   UrtFifoCfg(pADI_UART0, RX_FIFO_1BYTE,       // Configure the UART FIFOs for 8 bytes deep
+              BITM_UART_COMFCR_FIFOEN);
+   UrtFifoClr(pADI_UART0, BITM_UART_COMFCR_RFCLR// Clear the Rx/TX FIFOs
+              |BITM_UART_COMFCR_TFCLR);
+
+   UrtIntCfg(pADI_UART0,BITM_UART_COMIEN_ERBFI|BITM_UART_COMIEN_ELSI);
+}
+
+
+// Clock digital die with Internal 26MHz oscillator
+void ClockInit(void)
+{
+   DigClkSel(DIGCLK_SOURCE_HFOSC);
+   ClkDivCfg(1,1);
 }
 

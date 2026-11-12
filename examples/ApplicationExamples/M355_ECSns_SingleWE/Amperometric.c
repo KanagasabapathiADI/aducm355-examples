@@ -1,5 +1,5 @@
 /******************************************************************************
-Copyright (c) 2017-2019 Analog Devices, Inc. All Rights Reserved.
+Copyright (c) 2017-2026 Analog Devices, Inc. All Rights Reserved.
 
 This software is proprietary to Analog Devices, Inc. and its licensors.
 By using this software you agree to the terms of the associated
@@ -134,7 +134,7 @@ static AD5940Err AppAMPRtiaCal(AppECSnsCfg_Type *sns_cfg, uint8_t LPAMP)
   lprtia_cal.bWithCtia = bFALSE;
   AD5940_LPRtiaCal(&lprtia_cal, &RtiaCalValue);
   sns_cfg->RtiaCalValue = RtiaCalValue;
-  printf("Calibrated Rtia = %f \n", RtiaCalValue.Magnitude); 
+  printf("Calibrated Rtia = %f\r\n", RtiaCalValue.Magnitude); 
   return AD5940ERR_OK;
 }
 

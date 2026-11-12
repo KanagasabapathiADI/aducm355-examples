@@ -1,5 +1,5 @@
 /******************************************************************************
-Copyright (c) 2017-2019 Analog Devices, Inc. All Rights Reserved.
+Copyright (c) 2017-2026 Analog Devices, Inc. All Rights Reserved.
 
 This software is proprietary to Analog Devices, Inc. and its licensors.
 By using this software you agree to the terms of the associated
@@ -25,7 +25,7 @@ int main(void)
   ClockInit();
   UartInit();
   AD5940_MCUResourceInit(0);    /* Inialize all peripherals etc. used for AD5940/AFE. */
-  printf("Hello AD5940-Build Time:%s\n",__TIME__);
+  printf("Hello AD5940-Build Time:%s\r\n",__TIME__);
   AD5940_Main();
 }
 

@@ -51,7 +51,7 @@ void LED_Off (void) {
 /*----------------------------------------------------------------------------
   Function that adds delay
  *----------------------------------------------------------------------------*/
-void delay (int length)
+void delay (volatile int length)
 {
 	while (length > 0)
 	{

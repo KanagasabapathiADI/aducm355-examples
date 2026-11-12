@@ -44,7 +44,7 @@
                 </option>
                 <option>
                     <name>MemFile</name>
-                    <state>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.1.0}$/ARM/config/debugger/AnalogDevices/ADuCM356.ddf</state>
+                    <state>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.2.0}$/ARM/config/debugger/AnalogDevices/ADuCM356.ddf</state>
                 </option>
                 <option>
                     <name>RunToEnable</name>
@@ -112,7 +112,7 @@
                 </option>
                 <option>
                     <name>FlashLoadersV3</name>
-                    <state>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.1.0}$/ARM/config/flashloader/AnalogDevices/FlashADUCM356.board</state>
+                    <state>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.2.0}$/ARM/config/flashloader/AnalogDevices/FlashADUCM356.board</state>
                 </option>
                 <option>
                     <name>OCImagesSuppressCheck1</name>
@@ -1704,7 +1704,7 @@
                 </option>
                 <option>
                     <name>MemFile</name>
-                    <state>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.1.0}$/ARM/config/debugger/AnalogDevices/ADuCM356.ddf</state>
+                    <state>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.2.0}$/ARM/config/debugger/AnalogDevices/ADuCM356.ddf</state>
                 </option>
                 <option>
                     <name>RunToEnable</name>
@@ -1772,7 +1772,7 @@
                 </option>
                 <option>
                     <name>FlashLoadersV3</name>
-                    <state>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.1.0}$/ARM/config/flashloader/AnalogDevices/FlashADUCM356.board</state>
+                    <state>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.2.0}$/ARM/config/flashloader/AnalogDevices/FlashADUCM356.board</state>
                 </option>
                 <option>
                     <name>OCImagesSuppressCheck1</name>

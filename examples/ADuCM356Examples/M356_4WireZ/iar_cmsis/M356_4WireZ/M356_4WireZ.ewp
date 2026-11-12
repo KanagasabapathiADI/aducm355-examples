@@ -789,7 +789,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.1.0}$/ARM/config/linker/AnalogDevices/ADuCM356.icf</state>
+                    <state>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.2.0}$/ARM/config/linker/AnalogDevices/ADuCM356.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -1198,7 +1198,7 @@
                 </option>
                 <option>
                     <name>GenLowLevelInterface</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>GEndianModeBE</name>
@@ -1909,7 +1909,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.1.0}$/ARM/config/linker/AnalogDevices/ADuCM356.icf</state>
+                    <state>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.2.0}$/ARM/config/linker/AnalogDevices/ADuCM356.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -2250,19 +2250,15 @@
     <file>
         <name>$PROJ_DIR$\..\..\main.c</name>
     </file>
+    <file>
+        <name>$PROJ_DIR$\README_M356_4WireZ.txt</name>
+    </file>
     <group>
         <name>CMSIS-Pack</name>
         <tag>CMSISPack.Component</tag>
         <file>
             <name>$PROJ_DIR$\RTE\RTE_Components.h</name>
         </file>
-        <group>
-            <name>Device Retarget UART</name>
-            <tag>CMSISPack.Component</tag>
-            <file>
-                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.1.0}$\ADuCM355/common/IAR/retarget.c</name>
-            </file>
-        </group>
         <group>
             <name>Device Startup</name>
             <tag>CMSISPack.Component</tag>
@@ -2280,45 +2276,45 @@
             <name>Device.AFE Operation</name>
             <tag>CMSISPack.Component</tag>
             <file>
-                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.1.0}$\ADuCM355/common/ad5940lib/ad5940.c</name>
+                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.2.0}$\ADuCM355/common/ad5940lib/ad5940.c</name>
             </file>
             <file>
-                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.1.0}$\ADuCM355/common/ADuCM355Port.c</name>
+                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.2.0}$\ADuCM355/common/ADuCM355Port.c</name>
             </file>
         </group>
         <group>
             <name>Device.Peripheral Libraries CLOCK</name>
             <tag>CMSISPack.Component</tag>
             <file>
-                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.1.0}$\ADuCM355/common/ClkLib.c</name>
+                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.2.0}$\ADuCM355/common/ClkLib.c</name>
             </file>
         </group>
         <group>
             <name>Device.Peripheral Libraries GPIO</name>
             <tag>CMSISPack.Component</tag>
             <file>
-                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.1.0}$\ADuCM355/common/DioLib.c</name>
+                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.2.0}$\ADuCM355/common/DioLib.c</name>
             </file>
         </group>
         <group>
             <name>Device.Peripheral Libraries INT</name>
             <tag>CMSISPack.Component</tag>
             <file>
-                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.1.0}$\ADuCM355/common/IntLib.c</name>
+                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.2.0}$\ADuCM355/common/IntLib.c</name>
             </file>
         </group>
         <group>
             <name>Device.Peripheral Libraries RST</name>
             <tag>CMSISPack.Component</tag>
             <file>
-                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.1.0}$\ADuCM355/common/RstLib.c</name>
+                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.2.0}$\ADuCM355/common/RstLib.c</name>
             </file>
         </group>
         <group>
             <name>Device.Peripheral Libraries UART</name>
             <tag>CMSISPack.Component</tag>
             <file>
-                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.1.0}$\ADuCM355/common/UrtLib.c</name>
+                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.2.0}$\ADuCM355/common/UrtLib.c</name>
             </file>
         </group>
     </group>
@@ -2410,14 +2406,6 @@
       &lt;file category="header" deviceDependent="1" name="ADuCM355/common/UrtLib.h" version="2.0.0"/&gt;
 
       &lt;file category="source" deviceDependent="1" name="ADuCM355/common/UrtLib.c" version="2.0.0"/&gt;
-
-    &lt;/component&gt;
-
-    &lt;component Cclass="Device" Cgroup="Retarget UART" Cvendor="Analog Devices" Cversion="2.0.0" deviceDependent="1"&gt;
-
-      &lt;package name="ADuCM355_DFP" url="http://download.analog.com/tools/EZBoards/ADuCM355/Releases/" vendor="AnalogDevices" version="2.0.0"/&gt;
-
-      &lt;file category="source" condition="ADuCM355_IAR" deviceDependent="1" name="ADuCM355/common/IAR/retarget.c" version="2.0.0"/&gt;
 
     &lt;/component&gt;
 

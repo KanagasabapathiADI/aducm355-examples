@@ -29,7 +29,7 @@ int32_t AMPShowResult(float *pData, uint32_t DataCount)
 	int i;
   for(i=0;i<DataCount;i++)
   {
-    printf("Index %i:, %.3f , uA\n", i, pAmpCfg->SensorCh0.ResultBuffer[i]);
+    printf("Index %i: %.3f uA\r\n", i, pAmpCfg->SensorCh0.ResultBuffer[i]);
   }        
 return 0;
 }
@@ -66,7 +66,7 @@ static int32_t AD5940PlatformCfg(void)
   LfoscMeasure.CalSeqAddr = 0;
   LfoscMeasure.SystemClkFreq = 16000000.0f; /* 16MHz in this firmware. */
   AD5940_LFOSCMeasure(&LfoscMeasure, &LFOSCFreq);
-  printf("Freq:%f\n", LFOSCFreq); 
+  printf("Freq:%f\r\n", LFOSCFreq); 
   return 0;
 }
 

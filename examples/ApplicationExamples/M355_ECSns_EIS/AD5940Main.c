@@ -23,12 +23,12 @@ int32_t ImpedanceShowResult(uint32_t *pData, uint32_t DataCount)
   fImpPol_Type *pImp = (fImpPol_Type*)pData;
   AppIMPCtrl(IMPCTRL_GETFREQ, &freq);
   
-  printf("Freq:%.2f ", freq);
+  printf("\rFreq:%.2f ", freq);
   /*Process data*/
 	int i;
   for(i=0;i<DataCount;i++)
   {
-    printf("RzMag: %f Ohm , RzPhase: %f \n",pImp[i].Magnitude,pImp[i].Phase*180/MATH_PI);
+    printf("RzMag: %f Ohm , RzPhase: %f \r\n",pImp[i].Magnitude,pImp[i].Phase*180/MATH_PI);
   }
   return 0;
 }

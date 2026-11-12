@@ -2273,52 +2273,52 @@
             <name>Device.AFE Operation</name>
             <tag>CMSISPack.Component</tag>
             <file>
-                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.1.0}$\ADuCM355/common/ad5940lib/ad5940.c</name>
+                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.2.0}$\ADuCM355/common/ad5940lib/ad5940.c</name>
             </file>
             <file>
-                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.1.0}$\ADuCM355/common/ADuCM355Port.c</name>
+                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.2.0}$\ADuCM355/common/ADuCM355Port.c</name>
             </file>
         </group>
         <group>
             <name>Device.Peripheral Libraries CLOCK</name>
             <tag>CMSISPack.Component</tag>
             <file>
-                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.1.0}$\ADuCM355/common/ClkLib.c</name>
+                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.2.0}$\ADuCM355/common/ClkLib.c</name>
             </file>
         </group>
         <group>
             <name>Device.Peripheral Libraries GPIO</name>
             <tag>CMSISPack.Component</tag>
             <file>
-                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.1.0}$\ADuCM355/common/DioLib.c</name>
+                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.2.0}$\ADuCM355/common/DioLib.c</name>
             </file>
         </group>
         <group>
             <name>Device.Peripheral Libraries INT</name>
             <tag>CMSISPack.Component</tag>
             <file>
-                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.1.0}$\ADuCM355/common/IntLib.c</name>
+                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.2.0}$\ADuCM355/common/IntLib.c</name>
             </file>
         </group>
         <group>
             <name>Device.Peripheral Libraries PWR</name>
             <tag>CMSISPack.Component</tag>
             <file>
-                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.1.0}$\ADuCM355/common/PwrLib.c</name>
+                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.2.0}$\ADuCM355/common/PwrLib.c</name>
             </file>
         </group>
         <group>
             <name>Device.Peripheral Libraries SPI</name>
             <tag>CMSISPack.Component</tag>
             <file>
-                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.1.0}$\ADuCM355/common/SpiLib.c</name>
+                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.2.0}$\ADuCM355/common/SpiLib.c</name>
             </file>
         </group>
         <group>
             <name>Device.Peripheral Libraries UART</name>
             <tag>CMSISPack.Component</tag>
             <file>
-                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.1.0}$\ADuCM355/common/UrtLib.c</name>
+                <name>${CMSIS_PACK_PATH_AnalogDevices#ADuCM355_DFP#2.2.0}$\ADuCM355/common/UrtLib.c</name>
             </file>
         </group>
     </group>

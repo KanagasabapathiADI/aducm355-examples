@@ -16,8 +16,8 @@
         <TargetCommonOption>
           <Device>ADuCM355</Device>
           <Vendor>Analog Devices</Vendor>
-          <PackID>AnalogDevices.ADuCM355_DFP.2.1.0</PackID>
-          <PackURL>https://www.analog.com/en/support.html</PackURL>
+          <PackID>AnalogDevices.ADuCM355_DFP.2.2.0</PackID>
+          <PackURL>http://download.analog.com/tools/EZBoards/ADuCM355/Releases/</PackURL>
           <Cpu>IRAM(0x20000000,0x02000) IRAM2(0x20002000,0x02000) IROM(0x00000000,0x20000) XRAM(0x20004000,0x04000) XRAM2(0x20040000,0x08000) CPUTYPE("Cortex-M3") CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -415,6 +415,9 @@
           <GroupName>::CMSIS</GroupName>
         </Group>
         <Group>
+          <GroupName>::Compiler</GroupName>
+        </Group>
+        <Group>
           <GroupName>::Device</GroupName>
         </Group>
       </Groups>
@@ -429,8 +432,8 @@
         <TargetCommonOption>
           <Device>ADuCM355</Device>
           <Vendor>Analog Devices</Vendor>
-          <PackID>AnalogDevices.ADuCM355_DFP.2.1.0</PackID>
-          <PackURL>https://www.analog.com/en/support.html</PackURL>
+          <PackID>AnalogDevices.ADuCM355_DFP.2.2.0</PackID>
+          <PackURL>http://download.analog.com/tools/EZBoards/ADuCM355/Releases/</PackURL>
           <Cpu>IRAM(0x20000000,0x02000) IRAM2(0x20002000,0x02000) IROM(0x00000000,0x20000) XRAM(0x20004000,0x04000) XRAM2(0x20040000,0x08000) CPUTYPE("Cortex-M3") CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -828,6 +831,9 @@
           <GroupName>::CMSIS</GroupName>
         </Group>
         <Group>
+          <GroupName>::Compiler</GroupName>
+        </Group>
+        <Group>
           <GroupName>::Device</GroupName>
         </Group>
       </Groups>
@@ -914,12 +920,19 @@
           <targetInfo name="Release"/>
         </targetInfos>
       </component>
+      <component Cbundle="ARM Compiler" Cclass="Compiler" Cgroup="I/O" Csub="STDOUT" Cvariant="User" Cvendor="Keil" Cversion="1.2.0" condition="ARMCC Cortex-M">
+        <package name="ARM_Compiler" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="1.7.2"/>
+        <targetInfos>
+          <targetInfo name="Debug"/>
+          <targetInfo name="Release"/>
+        </targetInfos>
+      </component>
     </components>
     <files>
       <file attr="config" category="header" condition="ADuCM355" name="ADuCM355\inc\adi_config.h" version="2.0.0">
         <instance index="0">RTE\Device\ADuCM355\adi_config.h</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Analog Devices" Cversion="2.0.0" condition="ADuCM355 CMSIS Device"/>
-        <package name="ADuCM355_DFP" schemaVersion="1.2" url="https://www.analog.com/en/support.html" vendor="AnalogDevices" version="2.0.0"/>
+        <package name="ADuCM355_DFP" schemaVersion="1.2" url="http://download.analog.com/tools/EZBoards/ADuCM355/Releases/" vendor="AnalogDevices" version="2.2.0"/>
         <targetInfos>
           <targetInfo name="Debug"/>
           <targetInfo name="Release"/>
@@ -928,7 +941,7 @@
       <file attr="config" category="source" condition="ADuCM355_ARM" name="ADuCM355\common\ARM\startup_ADuCM355.S" version="2.0.0">
         <instance index="0">RTE\Device\ADuCM355\startup_ADuCM355.S</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Analog Devices" Cversion="2.0.0" condition="ADuCM355 CMSIS Device"/>
-        <package name="ADuCM355_DFP" schemaVersion="1.2" url="https://www.analog.com/en/support.html" vendor="AnalogDevices" version="2.0.0"/>
+        <package name="ADuCM355_DFP" schemaVersion="1.2" url="http://download.analog.com/tools/EZBoards/ADuCM355/Releases/" vendor="AnalogDevices" version="2.2.0"/>
         <targetInfos>
           <targetInfo name="Debug"/>
           <targetInfo name="Release"/>
@@ -937,7 +950,7 @@
       <file attr="config" category="source" condition="ADuCM355" name="ADuCM355\common\system_ADuCM355.c" version="2.0.0">
         <instance index="0">RTE\Device\ADuCM355\system_ADuCM355.c</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Analog Devices" Cversion="2.0.0" condition="ADuCM355 CMSIS Device"/>
-        <package name="ADuCM355_DFP" schemaVersion="1.2" url="https://www.analog.com/en/support.html" vendor="AnalogDevices" version="2.0.0"/>
+        <package name="ADuCM355_DFP" schemaVersion="1.2" url="http://download.analog.com/tools/EZBoards/ADuCM355/Releases/" vendor="AnalogDevices" version="2.2.0"/>
         <targetInfos>
           <targetInfo name="Debug"/>
           <targetInfo name="Release"/>

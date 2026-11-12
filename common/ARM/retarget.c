@@ -56,4 +56,7 @@ void _sys_exit(int return_code) {
 label:  goto label;  /* endless loop */
 }
 
-
+int stdout_putchar(int ch)
+{
+    return fputc(ch, (FILE *)1);
+}  
